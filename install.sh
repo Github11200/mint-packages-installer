@@ -1,11 +1,23 @@
 #!/bin/bash
 
-# echo "Starting system upgrade...\n"
-# apt-get upgrade
-# apt-get -y upgrade
+echo "Starting system upgrade...\n"
+apt-get upgrade
+apt-get -y upgrade
 
 echo "Installing apt packages...\n"
-PACKAGES=("curl", "git", "build-essential", "python3-pip", "gimp", "openshot-qt", "nextcloud-desktop", "nautilus-nextcloud", "vlc", "python3-venv")
+PACKAGES=(
+  curl
+  git
+  build-essential
+  python3-pip
+  gimp
+  openshot-qt
+  nextcloud-desktop
+  nautilus-nextcloud
+  vlc
+  python3-venv
+  python3.12-venv
+)
 
 echo "Installed apt pacakages\n"
 
