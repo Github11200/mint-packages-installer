@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Starting system upgrade...\n"
-sudo apt-get update 
-sudo apt-get -y upgrade
-
 echo "Installing apt packages...\n"
 PACKAGES=(
   curl
