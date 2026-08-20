@@ -5,7 +5,7 @@ apt-get upgrade
 apt-get -y upgrade
 
 echo "Done system upgrade. Installing apt packages...\n"
-PACKAGES=("curl", "git", "build-essential", "python3-pip", "gimp", "openshot-qt", "nextcloud-desktop", "nautilus-nextcloud", "vlc")
+PACKAGES=("curl", "git", "build-essential", "python3-pip", "gimp", "openshot-qt", "nextcloud-desktop", "nautilus-nextcloud", "vlc", "python3-venv")
 
 echo "Installed apt pacakages\n"
 
