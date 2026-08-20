@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Starting system upgrade...\n"
-apt-get upgrade
-apt-get -y upgrade
+sudo apt-get update 
+sudo apt-get -y upgrade
 
 echo "Installing apt packages...\n"
 PACKAGES=(
