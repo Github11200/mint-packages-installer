@@ -1,19 +1,8 @@
 #!/bin/bash
 
 echo "Installing apt packages...\n"
-PACKAGES=(
-  curl
-  git
-  build-essential
-  python3-pip
-  gimp
-  openshot-qt
-  nextcloud-desktop
-  nautilus-nextcloud
-  vlc
-  python3-venv
-  python3.12-venv
-)
+PACKAGES=("curl" "git" "build-essential" "python3-pip" "gimp" "openshot-qt" "nextcloud-desktop" "nautilus-nextcloud" "vlc" "python3-venv" "python3.12-venv")
+sudo apt install -y "${PACKAGES[@]}"
 
 echo "Installed apt pacakages\n"
 
