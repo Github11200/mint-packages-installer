@@ -28,7 +28,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 echo -e "\n==========================\nRunning the Nextcloud Docker container\n==========================\n"
 
 # Get the ID of the container that we just started
-CONTAINER_ID=$(docker run -d -p 8080:80 -e nextcloud)
+CONTAINER_ID=$(docker run -d -p 8080:80 nextcloud)
 echo -e "\nUsing container ID: $CONTAINER_ID\n"
 
 echo -e "\n==========================\nOpening link\n==========================\n"
