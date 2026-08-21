@@ -28,7 +28,13 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 echo "Running the Nextcloud Docker container..."
 docker run -p -d 8080:80 nextcloud
 
-docker exec --user www-data <ID> php /var/www/html/occ config:system:set trusted_domains 1 --value=10.42.0.1:8080
+# Get the ID of the container that we just started
+CONTAINER_ID=$(docker ps -q | head -n 1)
+echo "Using container ID: $CONTAINER_ID"
+docker exec --user www-data $CONTAINER_ID php /var/www/html/occ config:system:set trusted_domains 1 --value=10.42.0.1:8080
+
+# Print out the file to make sure it was written to correctly
+docker exec --user www-data $CONTAINER_ID cat /var/www/html/config/config.php
 
 echo "Opening link..."
 xdg-open "http://localhost:8080"
